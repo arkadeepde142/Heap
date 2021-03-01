@@ -2,7 +2,7 @@
 #define HEAP_H
 
 #include <stdio.h>
-
+//definition of abstract datatype --> heap
 typedef struct heap {
     void *arr;
     size_t elem_size;
@@ -11,6 +11,7 @@ typedef struct heap {
     int (*comp)(const void *, const void *);
 } heap;
 
+//funtion declarations
 heap init_heap(size_t capacity, int (*comp)(const void *, const void *), size_t elem_size);
 void destroy_heap(heap *ptr);
 void insert_into_heap(heap *ptr, void * element);
